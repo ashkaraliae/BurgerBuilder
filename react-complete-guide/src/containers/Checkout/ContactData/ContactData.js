@@ -98,7 +98,7 @@ class ContactData extends Component {
 
     orderHandler = (event) => {
         event.preventDefault();
-        console.log(this.props.ingredients);
+        //console.log(this.props.ingredients);
         const formData = {};
         for(let formElementidentifier in this.state.orderForm){
             formData[formElementidentifier] = this.state.orderForm[formElementidentifier].value;
@@ -137,7 +137,7 @@ class ContactData extends Component {
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched =true;
-        console.log(updatedFormElement.valid);
+        //console.log(updatedFormElement.valid);
         updatedOrderForm[inputIdentifier] = updatedFormElement;
         let formIsValid = true;
         for (let inputIdentifier in updatedOrderForm) {
